@@ -1,0 +1,6 @@
+
+.container{
+    font-size: 32rpx;
+    line-height: 2;
+    padding: 0 3%;
+}

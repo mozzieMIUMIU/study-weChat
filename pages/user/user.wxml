@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="loginWay">
+        <view id="password" class="login {{activeLogin == true ? 'red':'gray'}}" bindtap="loginWay">
+            帐号登录
+        </view>
+        <view id="phone" class="login {{activeLogin == false ? 'red':'gray'}}" bindtap="loginWay">
+            密码登录
+        </view>
+    </view>
+    <!--main-->
+    <view class="loginMsg" wx:if="{{activeLogin==true}}">
+        <view class="li">
+            <input  placeholder="手机号" value="{{suerName}}" bindblur="verifyPhone"/>
+        </view>
+        <view class="li">
+            <input placeholder="请输入密码" password="true" value="{{password}}"/>
+        </view>
+        <view class="loginBtn" bindtap="login">登 录</view>
+    </view>
+</view>

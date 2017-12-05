@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<view class="container">
+    <!--<view  bindtap="bindViewTap" class="userinfo">-->
+        <!--<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>-->
+        <!--<text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
+    <!--</view>-->
+    <!--轮播图-->
+    <view class="slider">
+        <swiper
+                autoplay="{{autoplay}}"
+                circular="{{circular}}"
+                indicator-dots="{{indicatorDots}}"
+                indicator-color="rgba(0,0,0,0.7)"
+                indicator-active-color="rgba(255,0,0,0.7)"
+                interval="{{interval}}">
+            <block wx:for="{{imgUrls}}" wx:key="imgUrls">
+                <swiper-item>
+                    <image
+                        id="{{item.sid}}"
+                        src="{{item.url}}"
+                        class="slide-image"
+                        style="width: {{imagewidth}}px; height: {{imageheight}}px;"
+                        bindtap="eatViewTap" mode="scaleToFill"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!--zhihu-->
+    <view class="zhihu">
+        <view wx:for="{{listData}}" wx:key="{{listData}}">
+            <view class="zhihuDay"><span>{{item.display_date}}</span></view>
+            <view wx:for="{{item.news}}" wx:key="{{item.news}}"  class="zhihuData">
+                <image class="zhihuImg" src="{{item.image}}"/>
+                <text class="zhihuText">{{item.title}}</text>
+            </view>
+        </view>
+        <!--more-->
+        <view>
+            <view class="loading"  wx:if="{{vMore}}">
+                <image src="/img/loading.gif" mode="aspectFit"/>
+            </view>
+            <view wx:else class="noMore"><text>没有更多了</text></view>
+        </view>
+    </view>
+
+    <!--底部菜单-->
+    <!--<view class="footer">-->
+        <!--<view class="footer-menu" id="index" hover-class="red" bindtap="menuTap">-->
+            <!--<i class="icoNav ico1"></i>-->
+            <!--<text class="">首页</text>-->
+        <!--</view>-->
+        <!--<view class="footer-menu" id="classify" hover-class="red" bindtap="menuTap">-->
+            <!--<i class="icoNav ico2"></i>-->
+            <!--<text class="">分类</text>-->
+        <!--</view>-->
+        <!--<view class="footer-menu" id="find" hover-class="red" bindtap="menuTap">-->
+            <!--<i class="icoNav ico3"></i>-->
+            <!--<text class="">发现</text>-->
+        <!--</view>-->
+        <!--<view class="footer-menu" id="car" hover-class="red" bindtap="menuTap">-->
+            <!--<i class="icoNav ico4"></i>-->
+            <!--<text class="">购物车</text>-->
+        <!--</view>-->
+        <!--<view class="footer-menu" id="user" hover-class="red" bindtap="menuTap">-->
+            <!--<i class="icoNav ico5"></i>-->
+            <!--<text class="">我的</text>-->
+        <!--</view>-->
+    <!--</view>-->
+</view>

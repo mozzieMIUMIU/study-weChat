@@ -1,0 +1,9 @@
+<!--eat.wxml-->
+<view class="container">
+    <view class="todayfood">
+        <text class="">今天吃{{food}}</text>
+    </view>
+    <view  bindtap="eatfoodTap" class="eatfoodTap">
+        <button type="primary" bindtap="primary">{{eats}}</button>
+    </view>
+</view>

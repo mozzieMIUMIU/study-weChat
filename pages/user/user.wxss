@@ -1,0 +1,39 @@
+.loginWay{
+    display: flex;
+    height: 120rpx;
+    line-height: 120rpx;
+}
+.loginWay .login{
+    width: 50%;
+    text-align: center;
+    font-size: 32rpx;
+    background: #f4f4f4;
+}
+.loginWay .red{
+    color: red;
+    background: #fff;
+}
+.loginWay .gray{
+    color: #000;
+}
+.loginMsg{
+    padding: 0 3%;
+    font-size: 30rpx;
+}
+
+.loginMsg .li{
+    border-bottom: 1px solid #cccccc;
+    height: 100rpx;
+}
+.loginMsg .li input{
+    padding-top: 32rpx;
+}
+.loginBtn{
+    margin-top: 50rpx;
+    background: #f23030;
+    color: #fff;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 3px;
+}

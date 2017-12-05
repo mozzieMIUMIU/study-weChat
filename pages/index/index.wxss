@@ -1,0 +1,107 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+/*轮播图*/
+image{
+    width: 750rpx;
+}
+.zhihu{
+    /*padding-bottom:100rpx;*/
+}
+.zhihu .zhihuDay{
+    text-align: center;
+    margin: 20rpx 0;
+}
+.zhihu .zhihuDay span{
+    border:1px solid #cccccc;
+    padding: 6rpx;
+    display: inline-block;
+    font-size: 30rpx;
+    border-radius: 3px;
+}
+.zhihuData{
+    display: flex;
+}
+.zhihuImg{
+    width:160rpx;
+    height: 160rpx;
+}
+.zhihuText{
+    display: flex;
+    flex: 3;
+    align-items: center;
+    font-size: 30rpx;
+    padding-left: 2%;
+}
+
+
+ /*footer 底部菜单*/
+.footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+}
+.footer .footer-menu{
+    width: 20%;
+    background: #fff;
+    text-align: center;
+    font-size: 25rpx;
+    padding:4rpx 0;
+    border-top: 1px solid #f1f1f1;
+}
+
+.red{
+    color: red;
+}
+.loading{
+    width: 100%;
+    text-align: center;
+}
+.loading image{
+    width: 140rpx;
+    height: 80rpx;
+}
+.noMore{
+    text-align: center;
+    font-size: 28rpx;
+    margin: 16rpx 0;
+}
+.icoNav{
+    background: url("http://m.tongtongmall.com/assets/images/nav.png?9614e5ea2feab07fa992b4475800931a") no-repeat;
+    width: 50rpx;
+    height: 50rpx;
+    display: block;
+    background-size: cover;
+    margin:0 auto;
+}
+
+.ico1{
+    background-position: 0 0;
+}
+.ico2{
+    background-position: -155rpx 0;
+}
+.ico3{
+    background-position: -310rpx 0;
+}
+.ico4{
+    background-position: -465rpx 0;
+}
+.ico5{
+    background-position: -620rpx 0;
+}
