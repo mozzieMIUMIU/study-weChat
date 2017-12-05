@@ -20,10 +20,10 @@ Page({
                 url:'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
             }
         ],
-        indicatorDots:true,
-        autoplay:true,
-        interval:5000,
-        circular:true,
+        // indicatorDots:true,
+        // autoplay:true,
+        // interval:5000,
+        // circular:true,
         //知乎数据
         listData:[],
         //更多？
