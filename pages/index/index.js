@@ -29,8 +29,7 @@ Page({
         //更多？
         vMore:true,
         //参数
-        zhihuDay:time.formatTime(new Date()),
-
+        zhihuDay:time.formatTime(new Date())
     },
     //事件处理函数
     bindViewTap: function() {
@@ -62,10 +61,8 @@ Page({
                     listData:that.data.listData,
                     listDateCurrent:res.data.display_date
                 })
-
             }
         })
-
     },
 
     //发现
@@ -94,15 +91,14 @@ Page({
         */
         var monthClose = this.data.zhihuDay.toString();
         var monthCloseSub = monthClose.substring(0,7)+'2';
-        console.log(monthCloseSub)
-        if(this.data.vMore && this.data.zhihuDay != monthCloseSub){
+        if(this.data.vMore){
             this.data.zhihuDay--;
             var that = this;
             wx.request({
                 url: 'https://news-at.zhihu.com/api/2/news/before/'+that.data.zhihuDay,
                 method:'GET',
                 success: function(res) {
-                    if(res.data.news.length<19){
+                    if(that.data.zhihuDay==monthCloseSub){
                         that.setData({
                             vMore:false
                         })
@@ -121,4 +117,16 @@ Page({
             })
         }
     },
-})
+    modalTap(e){
+        //txt-分享到微信朋友圈
+        console.log(e.target.dataset.share)
+    },
+
+    //返顶
+    goTop(){
+        wx.pageScrollTo({
+            scrollTop: 0
+        })
+    },
+
+});

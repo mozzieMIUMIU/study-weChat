@@ -4,6 +4,16 @@
         <!--<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>-->
         <!--<text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
     <!--</view>-->
+    <!--
+        通过data-<name>的设置，
+        在事件event里target>dataset>下查看<name>的值
+    -->
+    <!--
+        <image bindtap="modalTap"
+           data-share="分享到微信朋友圈"
+           data-test="123"
+           src="../../img/eat.jpg"/>
+    -->
     <!--轮播图-->
     <view class="slider">
         <swiper
@@ -42,6 +52,8 @@
             <view wx:else class="noMore"><text>没有更多了</text></view>
         </view>
     </view>
+    <!--gotop-->
+    <view class="goTop" bindtap="goTop">Top</view>
 
     <!--底部菜单-->
     <!--<view class="footer">-->

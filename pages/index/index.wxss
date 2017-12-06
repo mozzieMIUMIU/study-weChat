@@ -105,3 +105,19 @@ image{
 .ico5{
     background-position: -620rpx 0;
 }
+
+.goTop{
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    position: fixed;
+    right: 18rpx;
+    bottom: 14rpx;
+    font-size: 28rpx;
+    border-radius: 50%;
+    border:1px solid #cccccc;
+    background: rgba(255,255,255,0.5);
+    text-align: center;
+
+
+}
