@@ -1,8 +1,4 @@
 <!--index.wxml-->
 <view class="container">
     <view>这里是发现页。</view>
-    <view>☻.首页调用的知乎的接口，处理为可以浏览当月的数据</view>
-    <view>☻.本来模仿之前做的商城，忘记了接口对外访问权限的设置</view>
-    <view>☻.算是学习小程序一个demo吧</view>
-    <view>☻.在没有看到手册里有tabBar的时候，自定义写的底部菜单，rpx有一些未适配的问题</view>
 </view>
