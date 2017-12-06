@@ -35,6 +35,8 @@ image{
 }
 .zhihuData{
     display: flex;
+    padding-bottom: 10rpx;
+    margin: 0 10rpx;
 }
 .zhihuImg{
     width:160rpx;

@@ -6,12 +6,10 @@ Page({
     data: {
         motto: '今天我们吃什么',
         vue:'和vue很像嘛',
-        userInfo: {},
-        loading:'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
         imgUrls: [
             {
                 sid:'img1',
-                url:'../../img/eat.jpg',
+                url:'../../image/eat.jpg',
             },{
                 sid:'img2',
                 url:'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
@@ -20,10 +18,10 @@ Page({
                 url:'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
             }
         ],
-        // indicatorDots:true,
-        // autoplay:true,
-        // interval:5000,
-        // circular:true,
+        indicatorDots:true,
+        autoplay:true,
+        interval:5000,
+        circular:true,
         //知乎数据
         listData:[],
         //更多？
@@ -129,4 +127,11 @@ Page({
         })
     },
 
+    //去详情
+    goDetail(e){
+        console.log(e.target.dataset.id)
+        wx.navigateTo({
+            url: '../detail/detail?id='+e.target.dataset.id
+        })
+    }
 });

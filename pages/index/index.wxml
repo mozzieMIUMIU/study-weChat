@@ -39,15 +39,15 @@
     <view class="zhihu">
         <view wx:for="{{listData}}" wx:key="{{listData}}">
             <view class="zhihuDay"><span>{{item.display_date}}</span></view>
-            <view wx:for="{{item.news}}" wx:key="{{item.news}}"  class="zhihuData">
+            <view wx:for="{{item.news}}" wx:key="{{item.news}}"  class="zhihuData" bindtap="goDetail">
                 <image class="zhihuImg" src="{{item.image}}"/>
-                <text class="zhihuText">{{item.title}}</text>
+                <text class="zhihuText" data-id="{{item.id}}">{{item.title}}</text>
             </view>
         </view>
         <!--more-->
         <view>
             <view class="loading"  wx:if="{{vMore}}">
-                <image src="/img/loading.gif" mode="aspectFit"/>
+                <image src="/image/loading.gif" mode="aspectFit"/>
             </view>
             <view wx:else class="noMore"><text>没有更多了</text></view>
         </view>
